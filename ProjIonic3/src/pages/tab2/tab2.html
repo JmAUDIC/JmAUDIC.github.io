@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Profile</ion-title>
+    </ion-navbar>
+</ion-header>
+  
+  
+  <ion-content padding>
+    <h1>Prénom: {{ ( profile | async )?.firstname }}</h1>
+    <h1>Nom: {{ ( profile | async )?.lastname }}</h1>
+    <h1>User Name: {{ ( profile | async )?.username }}</h1>
+  </ion-content>
