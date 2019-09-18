@@ -1,0 +1,59 @@
+trajets:
+    path:  /
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:index" }
+
+trajets_conducteur:
+    path:  /mes_trajets
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:indexconducteur" }
+
+trajets_reservation:
+    path:  /mes_reservations
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:indexreservation" }
+
+trajets_show:
+    path:  /{id}/show
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:show" }
+
+trajets_add_reservation:
+    path:  /{id}/add_reservation
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:add" }
+
+trajets_remove_reservation:
+    path:  /remove_reservation/{id}
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:remove" }
+    requirements: { _method: get }
+
+trajets_new:
+    path:  /new
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:newpublic" }
+
+trajets_create:
+    path:  /create
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:create" }
+    requirements: { _method: post }
+
+
+trajets_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:edit" }
+
+trajets_update:
+    path:  /{id}/update
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:update" }
+    requirements: { _method: post|put }
+
+trajets_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:delete" }
+    requirements: { _method: post|delete }
+
+trajets_by_id_delete:
+    path:  /delete/{id}
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:deleteById" }
+    requirements: { _method: get }
+
+
+trajets_bulk_action:
+    path:  /bulk-action
+    defaults: { _controller: "TestPlatformBundle:TrajetPublic:bulk" }
+    requirements: { _method: post }

@@ -1,0 +1,42 @@
+trajet_admin:
+    path:  /
+    defaults: { _controller: "TestPlatformBundle:Trajet:index" }
+
+trajet_admin_show:
+    path:  /{id}/show
+    defaults: { _controller: "TestPlatformBundle:Trajet:show" }
+
+trajet_admin_new:
+    path:  /new
+    defaults: { _controller: "TestPlatformBundle:Trajet:new" }
+
+trajet_admin_create:
+    path:  /create
+    defaults: { _controller: "TestPlatformBundle:Trajet:create" }
+    requirements: { _method: post }
+
+trajet_admin_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "TestPlatformBundle:Trajet:edit" }
+
+trajet_admin_update:
+    path:  /{id}/update
+    defaults: { _controller: "TestPlatformBundle:Trajet:update" }
+    requirements: { _method: post|put }
+
+trajet_admin_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "TestPlatformBundle:Trajet:delete" }
+    requirements: { _method: post|delete }
+    
+trajet_admin_by_id_delete:
+    path:  /delete/{id}
+    defaults: { _controller: "TestPlatformBundle:Trajet:deleteById" }
+    requirements: { _method: get }
+    
+
+trajet_admin_bulk_action:
+    path:  /bulk-action
+    defaults: { _controller: "TestPlatformBundle:Trajet:bulk" }
+    requirements: { _method: post }
+    

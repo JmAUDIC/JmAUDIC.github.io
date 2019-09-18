@@ -1,0 +1,42 @@
+user_admin:
+    path:  /
+    defaults: { _controller: "TestUserBundle:User:index" }
+
+user_admin_show:
+    path:  /{id}/show
+    defaults: { _controller: "TestUserBundle:User:show" }
+
+user_admin_new:
+    path:  /new
+    defaults: { _controller: "TestUserBundle:User:new" }
+
+user_admin_create:
+    path:  /create
+    defaults: { _controller: "TestUserBundle:User:create" }
+    requirements: { _method: post }
+
+user_admin_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "TestUserBundle:User:edit" }
+
+user_admin_update:
+    path:  /{id}/update
+    defaults: { _controller: "TestUserBundle:User:update" }
+    requirements: { _method: post|put }
+
+user_admin_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "TestUserBundle:User:delete" }
+    requirements: { _method: post|delete }
+    
+user_admin_by_id_delete:
+    path:  /delete/{id}
+    defaults: { _controller: "TestUserBundle:User:deleteById" }
+    requirements: { _method: get }
+    
+
+user_admin_bulk_action:
+    path:  /bulk-action
+    defaults: { _controller: "TestUserBundle:User:bulk" }
+    requirements: { _method: post }
+    

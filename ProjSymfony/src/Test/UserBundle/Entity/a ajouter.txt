@@ -1,0 +1,8 @@
+/**
+   * @ORM\Column(name="mail", type="string", length=255)
+   */
+    protected $mail;
+    /**
+   * @ORM\Column(name="motdepasse", type="string", length=255)
+   */
+    protected $motdepasse;

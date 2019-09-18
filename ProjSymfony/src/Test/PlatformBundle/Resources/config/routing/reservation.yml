@@ -1,0 +1,42 @@
+reservation_admin:
+    path:  /
+    defaults: { _controller: "TestPlatformBundle:Reservation:index" }
+
+reservation_admin_show:
+    path:  /{id}/show
+    defaults: { _controller: "TestPlatformBundle:Reservation:show" }
+
+reservation_admin_new:
+    path:  /new
+    defaults: { _controller: "TestPlatformBundle:Reservation:new" }
+
+reservation_admin_create:
+    path:  /create
+    defaults: { _controller: "TestPlatformBundle:Reservation:create" }
+    requirements: { _method: post }
+
+reservation_admin_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "TestPlatformBundle:Reservation:edit" }
+
+reservation_admin_update:
+    path:  /{id}/update
+    defaults: { _controller: "TestPlatformBundle:Reservation:update" }
+    requirements: { _method: post|put }
+
+reservation_admin_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "TestPlatformBundle:Reservation:delete" }
+    requirements: { _method: post|delete }
+    
+reservation_admin_by_id_delete:
+    path:  /delete/{id}
+    defaults: { _controller: "TestPlatformBundle:Reservation:deleteById" }
+    requirements: { _method: get }
+    
+
+reservation_admin_bulk_action:
+    path:  /bulk-action
+    defaults: { _controller: "TestPlatformBundle:Reservation:bulk" }
+    requirements: { _method: post }
+    

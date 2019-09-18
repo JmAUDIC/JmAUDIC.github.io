@@ -1,0 +1,19 @@
+test_platform_reservation_admin:
+    resource: "@TestPlatformBundle/Resources/config/routing/reservation.yml"
+    prefix:   /reservation_admin
+
+test_platform_trajet_admin:
+    resource: "@TestPlatformBundle/Resources/config/routing/trajet.yml"
+    prefix:   /trajet_admin
+
+test_platform_trajet_public:
+    resource : "@TestPlatformBundle/Resources/config/routing/trajet_public.yml"
+    prefix:   /trajets
+
+changement_theme:
+    path:     /theme
+    defaults: { _controller: TestPlatformBundle:Theme:theme }
+
+test_platform_homepage:
+    path:     /
+    defaults: { _controller: TestPlatformBundle:Default:index }
